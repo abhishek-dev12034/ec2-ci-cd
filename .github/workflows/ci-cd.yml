@@ -27,7 +27,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
-            cd /var/www/ci-cd-ec2
+            cd /var/www/ec2-ci-cd
             git pull origin main
             npm install
             pm2 restart server.js || pm2 start server.js
